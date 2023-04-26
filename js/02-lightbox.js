@@ -24,11 +24,13 @@ galleryEl.addEventListener('click', (e) => {
     e.preventDefault()
     if (e.target === e.currentTarget) return
 
-    var lightbox = new SimpleLightbox('.gallery a');
+    var lightbox = new SimpleLightbox('.gallery a',
+        {
+        captionsData: 'alt',
+        captionDelay: 250
+       });
     lightbox.open(e.target)
-    lightbox.defaultOptions.captionsData = 'alt'
-    lightbox.defaultOptions.captionDelay = 250
-
+ 
 
 })
 
